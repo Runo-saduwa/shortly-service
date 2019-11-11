@@ -1,11 +1,11 @@
 const express = require('express');
 const config = require('config');
 const PORT = config.get('PORT')
-
+const connectDB = require('./config/db');
 const app = express();
 
 
-
+connectDB();
 
 
 app.listen(PORT, () => {
